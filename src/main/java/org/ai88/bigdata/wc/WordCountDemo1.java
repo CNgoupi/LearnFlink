@@ -8,6 +8,8 @@ import org.apache.flink.api.java.operators.FlatMapOperator;
 import org.apache.flink.api.java.operators.UnsortedGrouping;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.util.Collector;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author: goupi
@@ -15,6 +17,7 @@ import org.apache.flink.util.Collector;
  * DataSet API 不推荐
  */
 public class WordCountDemo1 {
+    private static final Logger LOG = LoggerFactory.getLogger(WordCountDemo1.class);
     public static void main(String[] args) throws Exception {
         // 1.创建执行环境
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
